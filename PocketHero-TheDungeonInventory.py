@@ -96,6 +96,12 @@ def adicionar_item_mochila(nome_item):
         "durabilidade": tabela_itens[nome_item]["durabilidade"]
     }
     mochila.append(item_para_mochila)
+  elif "armadura" in tabela_itens[nome_item]: # Se for uma armadura
+    item_para_mochila = {
+        "nome": nome_item,
+        "armadura": tabela_itens[nome_item]["armadura"]
+    }
+    mochila.append(item_para_mochila)
   else: # Se for uma comida
     mochila.append({"nome": nome_item})
 
@@ -185,7 +191,7 @@ def mostrar_mochila():
   for contador, item in enumerate(mochila, start=1):
     nome_item = item["nome"]
 
-    # Verifica se o item é uma arma (se tem 'dano' na tabela)
+    # Verifica se o item é uma arma
     if "dano" in tabela_itens[nome_item]:
       tipo_arma = tabela_itens[nome_item]["tipo"]
       dano = tabela_itens[nome_item]["dano"]
@@ -197,7 +203,13 @@ def mostrar_mochila():
       if "descrição" in tabela_itens[nome_item]:
         print(f"| ℹ️ {tabela_itens[nome_item]['descrição']}")
 
-      # Se não for arma, é comida
+    # Verifica se o item é uma armadura
+    elif "armadura" in tabela_itens[nome_item]:
+      defesa = tabela_itens[nome_item]["armadura"]
+      print(f"| [{contador}] {nome_item} [Armadura]")
+      print(f"| 🛡️ Defesa: {defesa}")
+
+    # Se não for arma nem armadura, é comida
     else:
       cura = tabela_itens[nome_item]["cura"]
       print(f"| [{contador}] {nome_item} [Comida]")
