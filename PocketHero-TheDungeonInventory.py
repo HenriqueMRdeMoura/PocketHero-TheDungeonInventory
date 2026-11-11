@@ -62,31 +62,31 @@ tabela_itens = {
 }
 # Dicionário com todos os montros (bosses e minibosses não incluídos)
 tabela_monstros = {
-    "Esqueleto": {"hp": 40, "dano": 15, "ouro": 20},
+    "Esqueleto": {"hp": 40, "dano": 15, "ouro": 25},
     "Goblin": {"hp": 30, "dano": 10, "ouro": 15},
     "Lobo": {"hp": 20, "dano": 20, "ouro": 20},
-    "Orc": {"hp": 60, "dano": 25, "ouro": 30},
+    "Orc": {"hp": 50, "dano": 25, "ouro": 30},
     "Rato Gigante": {"hp": 15, "dano": 10, "ouro": 5},
     "Slime": {"hp": 25, "dano": 5, "ouro": 5},
-    "Zumbi": {"hp": 30, "dano": 20, "ouro": 20}
+    "Zumbi": {"hp": 30, "dano": 20, "ouro": 25}
 }
 # Dicionário com todos os minibosses
 # Note for self: Ajustar os atributos dos minibosses
 tabela_minibosses = {
-    "Dragãozinho": {"hp": 75, "dano": 35, "ouro": 50},
-    "Lobisomem": {"hp": 75, "dano": 35, "ouro": 50},
+    "Dragãozinho": {"hp": 80, "dano": 30, "ouro": 50},
+    "Lobisomem": {"hp": 70, "dano": 40, "ouro": 50},
     "Vampiro": {"hp": 75, "dano": 35, "ouro": 50}
 }
 # Dicionário com todos os bosses
 # Note for self: Ajustar os atributos dos bosses
 tabela_bosses = {
-    "Dragão": {"hp": 100, "dano": 50, "ouro": 100},
-    "Lobisomem Alfa": {"hp": 100, "dano": 50, "ouro": 100},
-    "Vampiro Rei": {"hp": 100, "dano": 50, "ouro": 100}
+    "Dragão": {"hp": 125, "dano": 50, "ouro": 100},
+    "Lobisomem Alfa": {"hp": 100, "dano": 75, "ouro": 100},
+    "Vampiro Rei": {"hp": 110, "dano": 65, "ouro": 100}
 }
 # Dicionário com o chefão final
 tabela_bossfinal = {
-    "The Soul Reaper": {"hp": 1000, "dano": 250, "ouro": 1000}
+    "The Soul Reaper": {"hp": 2500, "dano": 250, "ouro": 10000}
 }
 # Função para adicionar itens à mochila.
 def adicionar_item_mochila(nome_item):
